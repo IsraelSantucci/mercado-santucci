@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="postgress" transaction-type="RESOURCE_LOCAL">
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://ec2-23-23-182-238.compute-1.amazonaws.com:5432/d2buvf0uviicpl" />
+			<property name="javax.persistence.jdbc.user"
+				value="nkkgoqjnullqsl" />
+			<property name="javax.persistence.jdbc.password"
+				value="22703c2afb4524b204e26a716f1b2d2304d711cf6d25132134a25b3b345afb4f" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="mercado"
+		transaction-type="RESOURCE_LOCAL">
+		<description>
+            Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
+        </description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost/meu_mercado12?useTimezone=true&amp;serverTimezone=UTC" />
+
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="root" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
